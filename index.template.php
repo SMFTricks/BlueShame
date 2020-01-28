@@ -36,7 +36,7 @@
 */
 
 /*	This theme is a work of SMF Tricks Team. For more information please visit
-	http://www.smftricks.com/
+	https://www.smftricks.com/
 	This theme was designed by Diego Andrés and is a free theme.
 	Visit SMF Tricks for more Free Themes and Premium Themes.
 */
@@ -251,18 +251,18 @@ function template_body_above()
 				
 					if(!empty($settings['twitter_username']))
 						echo '
-					<li><a class="social_icon twitter" href="https://twitter.com/', $settings['twitter_username'] , '" target="_blank"></a></li>';
+					<li><a class="social_icon twitter" href="https://twitter.com/', $settings['twitter_username'] , '" target="_blank" rel="noopener"></a></li>';
 						
 					if(!empty($settings['facebook_username']))
 						echo '
-					<li><a class="social_icon facebook" href="https://facebook.com/', $settings['facebook_username'] , '" target="_blank"></a></li>';
+					<li><a class="social_icon facebook" href="https://facebook.com/', $settings['facebook_username'] , '" target="_blank" rel="noopener"></a></li>';
 											
 					if(!empty($settings['youtube_username']))
 						echo '
-					<li><a class="social_icon youtube" href="https://youtube.com/user/', $settings['youtube_username'] , '" target="_blank"></a></li>';
+					<li><a class="social_icon youtube" href="https://youtube.com/user/', $settings['youtube_username'] , '" target="_blank" rel="noopener"></a></li>';
 						
 						echo '
-					<li><a class="social_icon rss" href="', empty($settings['rss_url']) ? '' . $scripturl . '?action=.xml;type=rss' : '' . $settings['rss_url'] . '', '" target="_blank"></a></li>';
+					<li><a class="social_icon rss" href="', empty($settings['rss_url']) ? '' . $scripturl . '?action=.xml;type=rss' : '' . $settings['rss_url'] . '', '" target="_blank" rel="noopener"></a></li>';
 					
 			echo '
 				</ul>	
