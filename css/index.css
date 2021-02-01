@@ -1696,7 +1696,7 @@ div#upper_section div.news form
 #footer_section
 {
 	background-color: #e0f2fb;
-	padding: 10px 0;
+	padding: 15px 0;
 	border-top: 1px solid rgba(0, 85, 128, 0.1);
 	width: 100%;
 }
@@ -1707,6 +1707,7 @@ div#upper_section div.news form
 #footer_section div.frame
 {
 	margin: 0 auto;
+	min-height: 35px;
 }
 #footer_section ul li, #footer_section p
 {
@@ -4225,18 +4226,24 @@ span.hidelink
 	.menu_responsive li {
 		display: block;
 		float: none;
-		background-color: rgba(255,255,255,0.9);
+		background-color: rgba(255,255,255,1);
 		text-align: left;
 		height: 35px;
 		line-height: 35px;
 		width: 100%;
 	}
 	.menu_responsive li a {
-		color: #ddd;
+		color: #888;
 		text-decoration: none;
 		width: 100%;
 		padding: 10px 360px 10px 20px;
 		height: 35px;
+	}
+	.menu_responsive a:hover {
+		color: #444;
+	}
+	.menu_responsive a.active {
+		color: #222;
 	}
 	.menu_responsive a#pull {
 		display: block;
@@ -4246,7 +4253,6 @@ span.hidelink
 		font-family: Helvetica,Arial,sans-serif;
 		font-size: 25px;
 		font-weight: bold;
-		line-height: 60px;
 		text-decoration: none;
 		text-align: right;
 		float: right;

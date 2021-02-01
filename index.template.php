@@ -36,7 +36,7 @@
 */
 
 /*	This theme is a work of SMF Tricks Team. For more information please visit
-	https://www.smftricks.com/
+	http://www.smftricks.com/
 	This theme was designed by Diego Andrés and is a free theme.
 	Visit SMF Tricks for more Free Themes and Premium Themes.
 */
@@ -86,15 +86,16 @@ function template_html_above()
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
 
 	// Show right to left and the character set for ease of translating.
-	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"', $context['right_to_left'] ? ' dir="rtl"' : '', '>
+	echo '<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"', $context['right_to_left'] ? ' dir="rtl"' : '', !empty($txt['lang_locale']) ? ' lang="' . str_replace("_", "-", substr($txt['lang_locale'], 0, strcspn($txt['lang_locale'], "."))) . '"' : '', '>
 <head>';
 
 	// The ?fin20 part of this link is just here to make sure browsers don't cache it wrongly.
 	echo '
+	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/fontawesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index', $context['theme_variant'], '.css?fin20" />
-	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/font-awesome.min.css" />
-	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/buttonlistvariant.css" />';
+	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/buttonlistvariant.css" />
+	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/responsive.css" />';
 
 	// Some browsers need an extra stylesheet due to bugs/compatibility issues.
 	foreach (array('ie7', 'ie6', 'webkit') as $cssfix)
@@ -110,6 +111,7 @@ function template_html_above()
 	// Here comes the JavaScript bits!
 	echo '
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="', $settings['theme_url'], '/scripts/fontawesome.min.js"></script>
 	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/dropdown.js?fin20"></script>
 	<script type="text/javascript" src="', $settings['default_theme_url'], '/scripts/script.js?fin20"></script>
 	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/theme.js?fin20"></script>
@@ -132,6 +134,7 @@ function template_html_above()
 
 	echo '
 	<meta http-equiv="Content-Type" content="text/html; charset=', $context['character_set'], '" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="', $context['page_title_html_safe'], '" />', !empty($context['meta_keywords']) ? '
 	<meta name="keywords" content="' . $context['meta_keywords'] . '" />' : '', '
 	<title>', $context['page_title_html_safe'], '</title>';
@@ -204,7 +207,7 @@ function template_body_above()
 								</li>
 								<li>
 									<a href="'. $scripturl. '?action=profile;area=account">
-										<span><i class="fa fa-gear"></i>&nbsp;&nbsp;', $txt['account'], '</span>
+										<span><i class="fa fa-cog"></i>&nbsp;&nbsp;', $txt['account'], '</span>
 									</a>
 								</li>
 								<li>
@@ -214,7 +217,7 @@ function template_body_above()
 								</li>
 								<li>
 									<a href="'. $scripturl. '?action=logout;', $context['session_var'], '=', $context['session_id'], '">
-										<span><i class="fa fa-sign-out"></i>&nbsp;&nbsp;', $txt['logout'], '</span>
+										<span><i class="fa fa-sign-out-alt"></i>&nbsp;&nbsp;', $txt['logout'], '</span>
 									</a>
 								</li>
 							</ul>
@@ -230,7 +233,7 @@ function template_body_above()
 							<ul class="dropdown-menu">
 								<li>
 									<a href="'. $scripturl. '?action=login">
-										<span><i class="fa fa-sign-in"></i>&nbsp;&nbsp;', $txt['login'], '</span>
+										<span><i class="fa fa-sign-in-alt"></i>&nbsp;&nbsp;', $txt['login'], '</span>
 									</a>
 								</li>
 								<li>
@@ -251,18 +254,18 @@ function template_body_above()
 				
 					if(!empty($settings['twitter_username']))
 						echo '
-					<li><a class="social_icon twitter" href="https://twitter.com/', $settings['twitter_username'] , '" target="_blank" rel="noopener"></a></li>';
+					<li><a class="social_icon twitter" href="https://twitter.com/', $settings['twitter_username'] , '" target="_blank"></a></li>';
 						
 					if(!empty($settings['facebook_username']))
 						echo '
-					<li><a class="social_icon facebook" href="https://facebook.com/', $settings['facebook_username'] , '" target="_blank" rel="noopener"></a></li>';
+					<li><a class="social_icon facebook" href="https://facebook.com/', $settings['facebook_username'] , '" target="_blank"></a></li>';
 											
 					if(!empty($settings['youtube_username']))
 						echo '
-					<li><a class="social_icon youtube" href="https://youtube.com/user/', $settings['youtube_username'] , '" target="_blank" rel="noopener"></a></li>';
+					<li><a class="social_icon youtube" href="https://youtube.com/user/', $settings['youtube_username'] , '" target="_blank"></a></li>';
 						
 						echo '
-					<li><a class="social_icon rss" href="', empty($settings['rss_url']) ? '' . $scripturl . '?action=.xml;type=rss' : '' . $settings['rss_url'] . '', '" target="_blank" rel="noopener"></a></li>';
+					<li><a class="social_icon rss" href="', empty($settings['rss_url']) ? '' . $scripturl . '?action=.xml;type=rss' : '' . $settings['rss_url'] . '', '" target="_blank"></a></li>';
 					
 			echo '
 				</ul>	
