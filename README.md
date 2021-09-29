@@ -2,7 +2,7 @@
     <img src="https://smftricks.com/logos/logo.png">
  </p>
   <p align="center">
-    <img src="https://custom.simplemachines.org/themes/index.php?action=download;lemma=2812;id=17426;image">
+    <img src="https://custom.simplemachines.org/index.php?action=download;theme=2812;attach=235083;image">
  </p>
  
  ## BlueShame
