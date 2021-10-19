@@ -111,7 +111,6 @@ function template_html_above()
 	// Here comes the JavaScript bits!
 	echo '
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="', $settings['theme_url'], '/scripts/fontawesome.min.js"></script>
 	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/dropdown.js?fin20"></script>
 	<script type="text/javascript" src="', $settings['default_theme_url'], '/scripts/script.js?fin20"></script>
 	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/theme.js?fin20"></script>
@@ -254,18 +253,18 @@ function template_body_above()
 				
 					if(!empty($settings['twitter_username']))
 						echo '
-					<li><a class="social_icon twitter" href="https://twitter.com/', $settings['twitter_username'] , '" target="_blank"></a></li>';
+					<li><a class="social_icon twitter" href="https://twitter.com/', $settings['twitter_username'] , '" target="_blank" rel="noopener"></a></li>';
 						
 					if(!empty($settings['facebook_username']))
 						echo '
-					<li><a class="social_icon facebook" href="https://facebook.com/', $settings['facebook_username'] , '" target="_blank"></a></li>';
+					<li><a class="social_icon facebook" href="https://facebook.com/', $settings['facebook_username'] , '" target="_blank" rel="noopener"></a></li>';
 											
 					if(!empty($settings['youtube_username']))
 						echo '
-					<li><a class="social_icon youtube" href="https://youtube.com/user/', $settings['youtube_username'] , '" target="_blank"></a></li>';
+					<li><a class="social_icon youtube" href="https://youtube.com/user/', $settings['youtube_username'] , '" target="_blank" rel="noopener"></a></li>';
 						
 						echo '
-					<li><a class="social_icon rss" href="', empty($settings['rss_url']) ? '' . $scripturl . '?action=.xml;type=rss' : '' . $settings['rss_url'] . '', '" target="_blank"></a></li>';
+					<li><a class="social_icon rss" href="', empty($settings['rss_url']) ? '' . $scripturl . '?action=.xml;type=rss' : '' . $settings['rss_url'] . '', '" target="_blank" rel="noopener"></a></li>';
 					
 			echo '
 				</ul>	
@@ -302,7 +301,6 @@ function template_body_above()
 <div id="wrapper" style="width: ' . $settings['forum_width'] . '">' : '', '
 
 	', template_menu(), '
-	', template_menu2(), '
 	
 	', theme_linktree(), '
 	
@@ -402,6 +400,9 @@ function template_menu()
 	global $context, $settings, $options, $scripturl, $txt;
 
 	echo '
+		<div class="menu_responsive">
+			<span class="menu_t">', $txt['st_menu'], '</span>
+			<a href="#" id="pull"><i class="fa fa-navicon"></i></a>
 			<ul class="menu">';
 
 	foreach ($context['menu_buttons'] as $act => $button)
@@ -453,7 +454,8 @@ function template_menu()
 	}
 
 	echo '
-			</ul>';
+			</ul>
+		</div>';
 }
 
 // Theme Copyright... Please DO NOT REMOVE THIS!
@@ -462,37 +464,6 @@ function bs_copyright()
 	$BS = 'Theme by <a href="https://smftricks.com">SMF Tricks</a>';
 	
 	return $BS;
-}
-
-// Show the menu up top. Something like [home] [help] [profile] [logout]...
-function template_menu2()
-{
-	global $context, $settings, $options, $scripturl, $txt;
-
-	echo '
-		<div class="menu_responsive">
-			<span class="menu_t">', $txt['st_menu'], '</span>
-			<a href="#" id="pull"><i class="fa fa-navicon"></i></a>
-			<ul class="reset" ', !empty($settings['forum_width']) ? 'style="width: '. $settings['forum_width']. '; margin: 0 auto;"' : '', '>';
-
-	$prevent_actions = array($settings['sh_remove_items']);
-		
-	foreach ($context['menu_buttons'] as $act => $button)
-	{
-		if (in_array($act, $prevent_actions))
-			continue;
-			
-		echo '
-				<li id="responsive_button_', $act, '">
-					<a class="', $button['active_button'] ? 'active ' : '', '" href="', $button['href'], '"', isset($button['target']) ? ' target="' . $button['target'] . '"' : '', '>
-							', $button['title'], '
-					</a>
-				</li>';
-	}
-
-	echo '
-			</ul>
-		</div>';
 }
 
 // Generate a strip of buttons.

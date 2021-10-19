@@ -65,18 +65,6 @@
 		float: none;
 		padding: 0 2px;
 	}
-	#quicknav, #quicknav ul
-	{
-		float: none;
-		clear: both;
-		text-align: center;
-		margin: 0 auto;
-	}
-	#quicknav ul li
-	{
-		float: none;
-		display: inline-block;
-	}
 	#header
 	{
 		min-height: 200px;

@@ -1521,7 +1521,8 @@ ul#navigation li
 {
 	background-color: #e0f2fb;
 	padding: 20px 0 10px;
-	height: 200px;
+	height: auto;
+	min-height: 200px;
 	border-bottom: 1px solid rgba(0, 85, 128, 0.1);
 }
 .h_frame
@@ -1649,7 +1650,7 @@ div#upper_section div.news form
 {
 	padding: 0 1em;
 	margin: 0 0 0 0;
-	background-color: rgba(255,255,255,0.6);
+	background-color: #ffffff;
 	border-width: 0 1px;
 	border-color: rgba(0, 85, 128, 0.6);
 	border-style: solid;
@@ -4043,157 +4044,158 @@ span.hidelink
 	padding:3px 10px
 }
 
-@media screen and (min-width: 1024px) {
-.menu,
-.menu ul,
-.menu li,
-.menu a {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-}
- 
-.menu {
-    height: 50px;
-	border-width: 5px 1px 1px;
-	border-style: solid;
-	border-color: #0074AE rgba(0, 85, 128, 0.6) rgba(0, 85, 128, 0.02);
-	background-color: #eaf5fa;
-}
- 
-.menu li {
-    position: relative;
-    list-style: none;
-    float: left;
-    display: block;
-	height: 50px;
-}
-.menu li a {
-    display: block;
-    padding: 0;
-    line-height: 50px;
-    text-decoration: none; 
-    font-family: Segoe UI;
-    font-weight: bold;
-    font-size: 13px;
-    color: #7b94a4; 
-    transition: color .2s ease-in-out;
-}
-.menu li a.active, .menu li a:active, .menu li a.active:hover
-{
-	color: #0099E5;
-}
-.menu li a span
-{
-	display: block;
-	height: 40px;
-	line-height: 50px;
-	position: relative;
-	padding: 0 15px;
-}
-.menu li a.active span, .menu li a.active:hover span
-{
-	border-top: 5px solid #0099E5;
-	margin-top: -5px;
-}
-.menu li a.active span:after, .menu li a.active:hover span:after {
-	border-color: #0099E5 transparent;
-	border-style: solid;
-	border-width: 8px 7px 0;
-	content: "";
-	display: inline-block;
-	position: absolute;
-	margin: 0 auto;
-	top: 0px;
-	right: 0;
-	left: 0;
-	z-index: 1;
-	width: 0;
-}
-.menu li a:hover span
-{
-	border-top: 5px solid #0074AE;
-	margin-top: -5px;
-}
-.menu li a:hover span:after {
-	border-color: #0074AE transparent;
-	border-style: solid;
-	border-width: 8px 7px 0;
-	content: "";
-	display: inline-block;
-	position: absolute;
-	margin: 0 auto;
-	top: 0px;
-	right: 0;
-	left: 0;
-	z-index: 1;
-	width: 0;
-}
- 
-.menu li:hover > a { color: #0074AE; }
-.menu ul {
-    position: absolute;
-    top: 48px;
-    left: 10px;
-    opacity: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-	z-index: 100000;
-    transition: opacity .25s ease .1s;
-	border-width: 3px 1px 1px;
-	border-style: solid;
-	border-color: #0074AE rgba(0, 85, 128, 0.6) rgba(0, 85, 128, 0.6);
-}
- 
-.menu li:hover > ul { opacity: 1; }
- 
-.menu ul li {
-    height: 0;
-    overflow: hidden;
-    padding: 0;
-    transition: height .25s ease .1s;
-	border-bottom: 1px solid rgba(153,153,153,0.5);
-}
- 
-.menu li:hover > ul li {
-    height: 32px;
-    overflow: visible;
-    padding: 0;
-}
-.menu ul li a {
-    width: 200px;
-    padding: 4px 10px;
-    margin: 0;
-	height: 32px;
-	line-height: 27px;
-    border: none;
-	font-weight: normal;
-}
-.menu ul li a:hover
-{
-	color: #333;
-}
- 
-.menu ul li:last-child a { border: none; }
-
-.menu_responsive a#pull {
-	display: none;
-}
-.menu_responsive
-{
-	display: none;
-}
-
-}
-
-@media screen and (max-width: 1024px) {
-
-.menu
-{
-	display: none;
+@media screen and (min-width: 991px) {
+	.menu,
+	.menu ul,
+	.menu li,
+	.menu a {
+		margin: 0;
+		padding: 0;
+		border: none;
+		outline: none;
+	}
+	
+	.menu {
+		height: 50px;
+		border-width: 5px 1px 1px;
+		border-style: solid;
+		border-color: #0074AE rgba(0, 85, 128, 0.6) rgba(0, 85, 128, 0.02);
+		background-color: #eaf5fa;
+	}
+	
+	.menu li {
+		position: relative;
+		list-style: none;
+		float: left;
+		display: block;
+		height: 50px;
+	}
+	.menu li a {
+		display: block;
+		padding: 0;
+		line-height: 50px;
+		text-decoration: none; 
+		font-family: Segoe UI;
+		font-weight: bold;
+		font-size: 13px;
+		color: #7b94a4; 
+		transition: color .2s ease-in-out;
+	}
+	.menu li a.active, .menu li a:active, .menu li a.active:hover
+	{
+		color: #0099E5;
+	}
+	.menu li a span
+	{
+		display: block;
+		height: 40px;
+		line-height: 50px;
+		position: relative;
+		padding: 0 15px;
+	}
+	.menu li a.active span, .menu li a.active:hover span
+	{
+		border-top: 5px solid #0099E5;
+		margin-top: -5px;
+	}
+	.menu li a.active span:after, .menu li a.active:hover span:after {
+		border-color: #0099E5 transparent;
+		border-style: solid;
+		border-width: 8px 7px 0;
+		content: "";
+		display: inline-block;
+		position: absolute;
+		margin: 0 auto;
+		top: 0px;
+		right: 0;
+		left: 0;
+		z-index: 1;
+		width: 0;
+	}
+	.menu li a:hover span
+	{
+		border-top: 5px solid #0074AE;
+		margin-top: -5px;
+	}
+	.menu li a:hover span:after {
+		border-color: #0074AE transparent;
+		border-style: solid;
+		border-width: 8px 7px 0;
+		content: "";
+		display: inline-block;
+		position: absolute;
+		margin: 0 auto;
+		top: 0px;
+		right: 0;
+		left: 0;
+		z-index: 1;
+		width: 0;
+	}
+	
+	.menu li:hover > a { color: #0074AE; }
+	.menu ul {
+		position: absolute;
+		top: 48px;
+		left: 10px;
+		opacity: 0;
+		background-color: rgba(255, 255, 255, 0.9);
+		z-index: 100000;
+		transition: opacity .25s ease .1s;
+		border-width: 3px 1px 1px;
+		border-style: solid;
+		border-color: #0074AE rgba(0, 85, 128, 0.6) rgba(0, 85, 128, 0.6);
+	}
+	
+	.menu li:hover > ul { opacity: 1; }
+	
+	.menu ul li {
+		height: 0;
+		overflow: hidden;
+		padding: 0;
+		transition: height .25s ease .1s;
+		border-bottom: 1px solid rgba(153,153,153,0.5);
+	}
+	
+	.menu li:hover > ul li {
+		height: 32px;
+		overflow: visible;
+		padding: 0;
+	}
+	.menu ul li a {
+		width: 200px;
+		padding: 4px 10px;
+		margin: 0;
+		height: 32px;
+		line-height: 27px;
+		border: none;
+		font-weight: normal;
+	}
+	.menu ul li a:hover
+	{
+		color: #333;
+	}
+	.menu ul li:last-child a {
+		border: none;
+	}
+	.menu_responsive span.menu_t {
+		display: none;
+	}
+	.menu,
+	.menu ul {
+		display: block !important;
+	}
 }
 
-.menu_responsive {
+@media screen and (max-width: 991px)
+{
+	.menu
+	{
+		display: none;
+	}
+	div#wrapper {
+		margin-top: 0;
+	}
+	.menu_responsive {
 		border-bottom: 0;
 		display: block;
 		padding: 0 20px;
@@ -4215,13 +4217,15 @@ span.hidelink
 		display: none;
 		height: auto;
 		position: absolute;
-		margin: 50px auto 0 !important;
+		margin: 50px auto 0;
+		padding: 0;
 		border-width: 3px 1px 1px;
 		border-style: solid;
 		border-color: #0074AE rgba(0, 85, 128, 0.6) rgba(0, 85, 128, 0.6);
-		z-index: 1000000;
+		z-index: 5;
 		left: 0;
 		right: 0;
+		width: 95%;
 	}
 	.menu_responsive li {
 		display: block;
@@ -4231,6 +4235,11 @@ span.hidelink
 		height: 35px;
 		line-height: 35px;
 		width: 100%;
+	}
+	.menu_responsive ul li ul li,
+	.menu_responsive ul ul {
+		display: none;
+		opacity: 0;
 	}
 	.menu_responsive li a {
 		color: #888;
