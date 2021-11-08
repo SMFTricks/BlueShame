@@ -1528,6 +1528,7 @@ ul#navigation li
 .h_frame
 {
 	margin: 0 auto;
+	min-height: 180px;
 }
 /* the content section */
 #content_section
@@ -4374,7 +4375,7 @@ span.hidelink
  
 .sb-wrapper input {
     width: 100px;
-    height: 13px !important;
+    height: 25px;
     padding: 6px 5px;
     float: left;   
     font: bold 13px 'lucida sans', 'trebuchet MS', 'Tahoma';
