@@ -92,7 +92,7 @@ function template_html_above()
 
 	// The ?fin20 part of this link is just here to make sure browsers don't cache it wrongly.
 	echo '
-	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/fontawesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index', $context['theme_variant'], '.css?fin20" />
 	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/buttonlistvariant.css" />
 	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/responsive.css" />';
@@ -250,7 +250,7 @@ function template_body_above()
 			</div>
 			<div id="quicknav">
 				<ul>';
-				
+
 					if(!empty($settings['twitter_username']))
 						echo '
 					<li><a class="social_icon twitter" href="https://twitter.com/', $settings['twitter_username'] , '" target="_blank" rel="noopener"></a></li>';
@@ -264,9 +264,7 @@ function template_body_above()
 					<li><a class="social_icon youtube" href="https://youtube.com/user/', $settings['youtube_username'] , '" target="_blank" rel="noopener"></a></li>';
 						
 						echo '
-					<li><a class="social_icon rss" href="', empty($settings['rss_url']) ? '' . $scripturl . '?action=.xml;type=rss' : '' . $settings['rss_url'] . '', '" target="_blank" rel="noopener"></a></li>';
-					
-			echo '
+					<li><a class="social_icon rss" href="', empty($settings['rss_url']) ? '' . $scripturl . '?action=.xml;type=rss' : '' . $settings['rss_url'] . '', '" target="_blank" rel="noopener"></a></li>
 				</ul>	
 			</div>
 		</div>

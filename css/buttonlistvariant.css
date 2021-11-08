@@ -1,7 +1,5 @@
 /***** Buttonlist - Custom icons *****/
 /** SMF Tricks Themes - buttonlistvariant.css **/
-/* Created by Diego Andrés */
-
 /* Mark */
 .buttonlist ul li a.button_strip_markread > span
 {
@@ -14,7 +12,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/tick.png);
 }
-
 /* Selected */
 .buttonlist ul li a.button_strip_markselectread > span
 {
@@ -27,7 +24,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/target.png);
 }
-
 /* All */
 .buttonlist ul li a.button_strip_readall > span, .buttonlist ul li a.button_strip_view_all_members > span
 {
@@ -40,7 +36,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/all.png);
 }
-
 /* New or Add */
 .buttonlist ul li a.button_strip_new_topic > span
 {
@@ -53,7 +48,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/plus.png);
 }
-
 /* Notify */
 .buttonlist ul li a.button_strip_notify > span
 {
@@ -66,7 +60,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/noty.png);
 }
-
 /* Poll or Stats */
 .buttonlist ul li a.button_strip_post_poll > span, .buttonlist ul li a.button_strip_add_poll > span
 {
@@ -79,7 +72,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/poll.png);
 }
-
 /* Event or Calendar or Date */
 .buttonlist ul li a.button_strip_post_event > span, .buttonlist ul li a.button_strip_calendar > span
 {
@@ -92,7 +84,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/calendar.png);
 }
-
 /* Move */
 .buttonlist ul li a.button_strip_move > span
 {
@@ -105,7 +96,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/move.png);
 }
-
 /* Remove or Delete */
 .buttonlist ul li a.button_strip_delete > span, .buttonlist ul li a.button_strip_remove_poll > span
 {
@@ -118,7 +108,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/delete.png);
 }
-
 /* Send or Email */
 .buttonlist ul li a.button_strip_send > span
 {
@@ -131,7 +120,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/send.png);
 }
-
 /* Unread */
 .buttonlist ul li a.button_strip_mark_unread > span
 {
@@ -144,7 +132,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/unread.png);
 }
-
 /* Print */
 .buttonlist ul li a.button_strip_print > span
 {
@@ -157,7 +144,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/print.png);
 }
-
 /* Lock */
 .buttonlist ul li a.button_strip_lock > span
 {
@@ -170,7 +156,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/lock.png);
 }
-
 /* Sticky */
 .buttonlist ul li a.button_strip_sticky > span
 {
@@ -183,7 +168,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/sticky.png);
 }
-
 /* Merge */
 .buttonlist ul li a.button_strip_merge > span
 {
@@ -196,7 +180,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/merge.png);
 }
-
 /* Reply */
 .buttonlist ul li a.button_strip_reply > span
 {
@@ -209,7 +192,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/reply.png);
 }
-
 /* Search */
 .buttonlist ul li a.button_strip_mlist_search > span
 {
@@ -222,7 +204,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/search.png);
 }
-
 /* Results */
 .buttonlist ul li a.button_strip_results > span
 {
@@ -235,7 +216,6 @@
 {
 	background-image: url(../images/md/buttonlist/active/search.png);
 }
-
 /* Edit Poll */
 .buttonlist ul li a.button_strip_edit > span
 {
@@ -248,7 +228,126 @@
 {
 	background-image: url(../images/md/buttonlist/active/poll.png);
 }
-
-/** This code was created by Diego Andrés for smftricks.com **/
-/** MundoNet 2014 **/
 /** SMF Tricks - Free & Premium Themes for SMF **/
+
+/**** FontAwesome ****/
+/* Mark Read */
+.fa-markread::before,
+.fa-markselectread::before {
+	content: "\f00c";
+}
+/* Not Read */
+.fa-mark_unread::before {
+	content: "\f00d";
+}
+/* Read all */
+.fa-readall::before {
+	content: "\f06e";
+}
+/* Send Topic */
+.fa-send::before {
+	content: "\f1d8";
+}
+/* Notify */
+.fa-notify::before {
+	content: "\f0f3";
+}
+/* New Poll */
+.fa-post_poll::before,
+.fa-add_poll::before {
+	content: "\f681";
+}
+/* Delete Poll */
+.fa-remove_poll::before {
+	content: "\f2ed";
+}
+/* New Topic */
+.fa-new_topic::before {
+	content: "\f15b";
+}
+/* Move Topic */
+.fa-move::before {
+	content: "\f0b2";
+}
+/* Delete Topic */
+.fa-delete::before {
+	content: "\f2ed";
+}
+/* Sticky Topic */
+.fa-sticky::before {
+	content: "\f08d";
+}
+/* Merge Topic */
+.fa-merge::before {
+	content: "\f248";
+}
+/* View All Members */
+.fa-view_all_members::before {
+	content: "\f0c0";
+}
+/* Find Member */
+.fa-mlist_search::before {
+	content: "\f4fc";
+}
+/* Calendar Menu */
+.fa-calendar::before {
+	content: "\f073";
+}
+/* Register */
+.fa-register::before {
+	content: "\f234";
+}
+/* Login */
+.fa-login::before {
+	content: "\f2f6";
+}
+/* Community */
+.menu_icon.fa-community::before {
+	content: "\f022";
+}
+.menu_icon.fa-forum::before {
+	content: "\f07c";
+}
+/* FA Nav */
+.fa-help::before {
+	content: "\f128";
+}
+.fa-admin::before {
+	content: "\f085";
+}
+.fa-moderate::before {
+	content: "\f7d9";
+}
+.fa-profile::before {
+	content: "\f007";
+}
+.fa-pm::before {
+	content: "\f0e0";
+}
+.fa-mlist::before {
+	content: "\f0c0";
+}
+.fa-logout::before {
+	content: "\f2f5";
+}
+/* Topic Icons */
+.fa-stickybg::before {
+	content: "\f08d";
+}
+.fa-lockedbg::before {
+	content: "\f023";
+}
+.fa-approvebg::before,
+.fa-approvetbg::before {
+	content: "\f12a";
+}
+.fa-windowbg::before {
+	content: "\f4ad";
+}
+.fa-morestats:before {
+	content:"\f200"
+}
+.fa-recentview:before {
+	content:"\f086"
+}
+/**** FontAwesome *****/
